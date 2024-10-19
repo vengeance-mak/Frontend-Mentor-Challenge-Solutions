@@ -57,7 +57,6 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, minmax(1fr, 220px));
   gap: 0px;
-  place-items: center;
   margin-top: 10px;
   margin-inline: 5px;
   padding-inline: 5px;
@@ -69,11 +68,13 @@ body {
   width: 290px;
   height: 290px;
   border-radius: 15px;
+  place-self: center;
 }
 
 .content {
   text-align: center;
   padding-inline: 20px;
+  align-self: first baseline;
 }
 
 .title {
