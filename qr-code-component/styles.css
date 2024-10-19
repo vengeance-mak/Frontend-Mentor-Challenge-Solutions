@@ -1,0 +1,99 @@
+/* outfit-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/outfit-v11-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* outfit-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/outfit-v11-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  --fs-body: 15px;
+  --fw-normal: 400;
+  --fw-bold: 700;
+  --ff: "Outfit", sans-serif;
+  --col-white: hsl(0, 0%, 100%);
+  --col-light: hsl(212, 45%, 89%);
+  --col-normal: hsl(216, 15%, 48%);
+  --col-bold: hsl(218, 44%, 22%);
+}
+
+body {
+  font-family: var(--ff);
+  font-size: var(--fs-body);
+  background-color: var(--col-light);
+  color: var(--col-normal);
+  padding-inline: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
+  width: 100svw;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.container {
+  width: 300px;
+  min-width: 300px;
+  background-color: var(--col-white);
+  min-height: 500px;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, minmax(1fr, 220px));
+  gap: 0px;
+  place-items: center;
+  margin-top: 10px;
+  margin-inline: 5px;
+  padding-inline: 5px;
+}
+
+.container img {
+  min-width: 280px;
+  min-height: 280px;
+  width: 280px;
+  height: 280px;
+  border-radius: 15px;
+}
+
+.content {
+  text-align: center;
+  padding-inline: 20px;
+}
+
+.title {
+  color: var(--col-bold);
+  font-size: 18px;
+}
+
+@media (width >= 520px) {
+  .container {
+    width: 400px;
+    height: 600px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, minmax(1fr, 420px));
+  }
+  .container img {
+    min-width: 380px;
+    min-height: 380px;
+    width: 380px;
+    height: 380px;
+  }
+  .content{
+    padding-inline: 40px;
+  }
+}
